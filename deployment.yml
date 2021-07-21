@@ -111,18 +111,11 @@
 # echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh
 # common
 # user
-# deepnest
 # etcher
 # lightburn
-# veracrypt
-# element
-# zotero
-# typora
-# xournal++
-# teams
-# zoom
-# cisco
+# zotero # Literaturverwaltung
+# typora # MD-Editor
+# cisco 
 # parsec
-# among us
-# minecraft
-# table top simulator
+# thunderbird
+# neofetch # displays infos about the system in the terminal, very pritty
