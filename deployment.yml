@@ -14,7 +14,6 @@
       vars:
         vscode_extension:
           - platformio.platformio-ide
-          - cweijan.vscode-office
           - robole.marky-stats
           - yzhang.markdown-all-in-one
           - ms-vsliveshare.vsliveshare-pack
@@ -27,17 +26,10 @@
 
     ## CAD/CAM Programs ##
 
-    - name: Install Prusa Slicer from default apt repositorys
-      apt:
-        name: prusa-slicer
-
     - name: Install FreeCAD from default apt repositorys
       apt:
         name: freecad
 
-    - name: Install Blender from default apt repositorys
-      apt:
-        name: blender
 
     - name: Install OpenSCAD from default apt repositorys
       apt:
@@ -51,48 +43,9 @@
       apt:
         name: inkscape
 
-    - name: Install KiCad from default apt repositorys
-      apt:
-        name: kicad
-
-    - name: Install Printrun from default apt repositorys
-      apt:
-        name: printrun
-
     ## Backup Programs ##
 
-    - name: Install Syncthing from default apt repositorys
-      apt:
-        name: syncthing
-
-    - name: Install KeePassXC from default apt repositorys
-      apt:
-        name: keepassxc
-
-    - name: Install Nextcloud Desktop from default apt repositorys
-      apt:
-        name: nextcloud-desktop
-
     ## Writing Programs ##
-
-    - name: Install Pandoc from default apt repositorys
-      apt:
-        name:
-          - pandoc
-          - pandoc-citeproc
-
-    - name: Install TeX Live from default apt repositorys
-      apt:
-        name:
-          - texlive
-          - texlive-lang-german
-          - texlive-latex-extra
-          - texlive-fonts-extra
-          - texlive-luatex
-
-    - name: Install Calibre from default apt repositorys
-      apt:
-        name: calibre
 
     ## Coding Programs ##
 
@@ -106,25 +59,11 @@
       apt:
         name: arduino
 
-    - name: Install Android Tools from default apt repositorys
-      apt:
-        name:
-          - adb
-          - fastboot
-
     ## Media Programs ##
 
     - name: Install VLC media player from default apt repositorys
       apt:
         name: vlc
-
-    - name: Install Audacity from default apt repositorys
-      apt:
-        name: audacity
-
-    - name: Install Ardour from default apt repositorys
-      apt:
-        name: ardour
 
     - name: Install OBS Studio from default apt repositorys
       apt:
@@ -144,10 +83,6 @@
       apt:
         name: telegram-desktop
 
-    - name: Install Slack Desktop from default apt repositorys
-      apt:
-        name: slack-desktop
-
     - name: Install Discord from default apt repositorys
       apt:
         name: discord
@@ -166,21 +101,14 @@
 
     ## Web Programs ##
 
-    - name: Install Chromium from default apt repositorys
-      apt:
-        name: chromium-browser
-
     - name: Install Transmission from default apt repositorys
       apt:
         name: transmission
 
-    - name: Install TIPP10 from default apt repositorys
-      apt:
-        name: tipp10
-
 
 # git config --global user.email "you@example.com"
 # git config --global user.name "Your Name"
+# echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh
 # common
 # user
 # deepnest
