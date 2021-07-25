@@ -3,15 +3,21 @@
 
   pre_tasks:
 
+    # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
     - name: Update && Dist-Upgrade the OS via apt
       apt:
-        upgrade: dist
         update_cache: yes
         cache_valid_time: 86400 # 1 day
+        upgrade: dist
+        autoremove: yes
+        autoclean: yes
 
   roles:
     - role: ngetchell.vscode
+    - role: ngetchell.vscode
       vars:
+        become_user: "{{ user }}"
+        vscode_install: false
         vscode_extension:
           - platformio.platformio-ide
           - robole.marky-stats
@@ -47,6 +53,38 @@
 
     ## Writing Programs ##
 
+    - name: Install Sweet Home 3D from default apt repositorys
+      apt:
+        name: sweethome3d
+
+    - name: Install GNU Octave from default apt repositorys
+      apt:
+        name: octave
+
+
+    ## Backup Programs ##
+
+    - name: Install Nextcloud Desktop from default apt repositorys
+      apt:
+        name: nextcloud-desktop
+
+    - name: Install rsync from default apt repositorys
+      apt:
+        name:
+          - rsync
+
+
+    ## Writing Programs ##
+
+    - name: Install AsciiDoc from default apt repositorys
+      apt:
+        name: asciidoc
+
+    - name: Install pdfgrep from default apt repositorys
+      apt:
+        name: pdfgrep
+
+
     ## Coding Programs ##
 
     - name: Install Vagrant from default apt repositorys
@@ -54,6 +92,10 @@
         name:
           - vagrant
           - virtualbox
+
+    - name: Install QEMU from default apt repositorys
+      apt:
+        name: qemu
 
     - name: Install Arduino IDE from default apt repositorys
       apt:
@@ -68,13 +110,25 @@
     - name: Install OBS Studio from default apt repositorys
       apt:
         name: obs-studio
-        
+
+    - name: Install Cheese from default apt repositorys
+      apt:
+        name: cheese
+
 
     ## Gaming Programs ##
 
     - name: Install Steam from default apt repositorys
       apt:
         name: steam
+
+    - name: Install PlayOnLinux from default apt repositorys
+      apt:
+        name: playonlinux
+
+    - name: Install Lutris from default apt repositorys
+      apt:
+        name: lutris
 
 
     ## Communications Programs ##
@@ -87,11 +141,13 @@
       apt:
         name: discord
 
+
     ## Learning Programs ##
 
     - name: Install Anki from default apt repositorys
       apt:
         name: anki
+
 
     ## Finance Programs ##
 
@@ -99,13 +155,53 @@
       apt:
         name: gnucash
 
+
     ## Web Programs ##
 
     - name: Install Transmission from default apt repositorys
       apt:
         name: transmission
 
-    
+    - name: Install Thunderbird from default apt repositorys
+      apt:
+        name: thunderbird
+
+    - name: Install Nmap from default apt repositorys
+      apt:
+        name: nmap
+
+
+
+    ## CLI Programs ##
+
+    - name: Install acpi from default apt repositorys
+      apt:
+        name: acpi
+
+    - name: Install ncdu from default apt repositorys
+      apt:
+        name: ncdu
+
+    - name: Install tlp from default apt repositorys
+      apt:
+        name: tlp
+
+    - name: Install tree from default apt repositorys
+      apt:
+        name: tree
+
+    - name: Install vim from default apt repositorys
+      apt:
+        name: vim
+
+    - name: Install powertop from default apt repositorys
+      apt:
+        name: powertop
+
+    - name: Install traceroute from default apt repositorys
+      apt:
+        name: traceroute
+
 
 
 # git config --global user.email "you@example.com"
@@ -127,3 +223,12 @@
 # libpam-fprinfd
 # active fingerprint auth with sudo pam-auth-update (graphical interaktion needed)
 # spotify-client
+# xfreerdp
+# table top simulator
+# inkstitch
+# linphone / sip client
+# implicitcad
+# teamviewer
+# unattended-upgraded / apt-listchanges
+# davinci resolve
+# wireguard
