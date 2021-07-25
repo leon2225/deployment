@@ -105,6 +105,8 @@
       apt:
         name: transmission
 
+    
+
 
 # git config --global user.email "you@example.com"
 # git config --global user.name "Your Name"
@@ -118,6 +120,10 @@
 # cisco 
 # parsec
 # thunderbird
+# bitwarden
 # neofetch # displays infos about the system in the terminal, very pritty
 # Stop the OSK from always popping up when tapping into a text-field with the touchscreen
 # -- https://extensions.gnome.org/extension/3222/block-caribou-36/ works but must e installed via firefox?!
+# libpam-fprinfd
+# active fingerprint auth with sudo pam-auth-update (graphical interaktion needed)
+# spotify-client
